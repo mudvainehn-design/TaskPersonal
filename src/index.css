@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-surface: #fdf5ef;
+  --color-on-surface: #312e2a;
+  --color-on-surface-variant: #5f5b56;
+  --color-primary: #b7131a;
+  --color-primary-dim: #a40010;
+  --color-primary-container: #ff766b;
+  --color-on-primary: #ffefed;
+  --color-secondary: #8b4b00;
+  --color-surface-container: #efe7e0;
+  --color-surface-container-low: #f7efe8;
+  --color-surface-container-high: #e9e1d9;
+  --color-surface-container-highest: #e3dcd3;
+  --color-surface-container-lowest: #ffffff;
+  --color-outline-variant: #b2aca6;
+  --color-error: #b41340;
+}
+
+@layer base {
+  html {
+    font-size: 10px;
+  }
+  body {
+    @apply bg-surface text-on-surface font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .sunlight-shadow {
+    box-shadow: 0px 12px 32px rgba(49, 46, 42, 0.04);
+  }
+  .primary-gradient {
+    background: linear-gradient(135deg, #b7131a 0%, #ff766b 100%);
+  }
+}
